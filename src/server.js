@@ -27,8 +27,6 @@ app.get('/image/:breed', (req, res) => {
         res.status(404).json({ error: 'Breed not found' });
     }
 });
-
-// Add a wildcard route to handle all other GET requests
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
